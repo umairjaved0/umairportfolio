@@ -1,0 +1,118 @@
+
+.contact-section {
+  background: linear-gradient(to bottom, #0f0f0f, #1c1c1c);
+  color: white;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(31, 31, 31, 0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 24px rgba(0, 188, 212, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 12px 14px 10px;
+  border: none;
+  border-bottom: 2px solid #00bcd4;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  resize: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #00eaff;
+}
+
+.form-group label {
+  position: absolute;
+  top: 14px;
+  left: 10px;
+  color: #aaa;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.form-group input:focus + label,
+.form-group input:valid + label,
+.form-group textarea:focus + label,
+.form-group textarea:valid + label {
+  top: -10px;
+  font-size: 0.8rem;
+  color: #00bcd4;
+  background: #1f1f1f;
+  padding: 0 6px;
+}
+
+.submit-btn {
+  background: #00bcd4;
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 188, 212, 0.2);
+}
+
+.submit-btn:hover {
+  background: #0097a7;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Optional Background SVG Shapes – you can add a <svg> or <ParticlesBackground /> component in JSX if needed */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #1f1f1f;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 4px 20px rgba(0, 188, 212, 0.3);
+  z-index: 9999;
+  animation: fadeInOut 3s ease forwards;
+  border-left: 5px solid;
+}
+
+.toast.success {
+  border-color: #00e676;
+  background-color: rgba(0, 230, 118, 0.1);
+}
+
+.toast.error {
+  border-color: #f44336;
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10%, 90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
